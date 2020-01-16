@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment 15/1/2020</title>
+</head>
+<style >
+	body{
+		background-color: #99ffff;
+	}
+	.wrapper{
+        background-color: #66dddd;
+        width: 60vw;
+        height: 60vh;
+        margin:20vh 20vw;
+        text-align: center;
+        color: #226666;
+        border: 5px solid #339999;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #226666;
+        font-size: 30px;
+	}
+	h1{
+		font-size: 50px;
+	}
+	input{
+		width:60%;
+		height: 50px;
+		margin-top: 50px;
+		margin-left: 20%;
+		display: block;
+	}
+	button{
+		padding: 10px;
+		font-size: 30px;
+		margin: 30px;
+		background-color: #339999;
+		color: #226666;
+		border-radius: 20%;
+		border: 2px solid silver;
+		text-shadow: 1px 1px silver
+
+	}
+	#wrapper3 input{
+			margin-top: -20px;
+			margin-bottom: -20px;
+	
+	}
+	#wrapper3 button{
+			margin-top: -15px;
+			margin-bottom: -15px;
+	
+	}
+	#wrapper3{
+		height: 70vh;
+	}
+</style>
+<body>
+	<div class="wrapper" id="wrapper1">
+		<h1>half of number</h1>
+<input type="number" name="square" id="num1">
+<button onclick="calculateHalf();">calculate</button>
+<div id="displayHalf">display answer</div>
+</div>
+<div class="wrapper" id="wrapper2">
+	
+<h1>square number</h1>
+<input type="number" name="square" id="number">
+<button onclick="calculateSquare();">calculate</button>
+<div id="displaySquare">display answer</div>
+
+</div><div class="wrapper" id="wrapper3">
+
+<h1>percent of number</h1>
+<input type="number"  id="principal" placeholder="principal"><br><br>
+<input type="number"  id="num2" placeholder="n"><br><br>
+<button onclick="calculatePercent();">calculate</button><br><br>
+<div id="displayPercent">display answer</div>
+
+</div><div class="wrapper" id="wrapper4">
+
+<h1>Area of a circle</h1>
+<input type="number" name="square" id="raduis">
+<button onclick="calculateArea();">calculate</button>
+<div id="displayArea">display answer</div><br><br>
+
+</div><div class="wrapper" id="wrapper5">
+
+<h1>spiral calculation</h1>
+<input type="number" name="square" id="spiral">
+<button onclick="calculateAll();">calculate Spiral</button>
+<div id="displaySpiral">display answer</div><br><br>
+
+</div>
+<script >
+	const calculateSquare = () =>{
+		 const number = document.getElementById("number").value;
+		const displaySquare = document.getElementById("displaySquare");
+        const square = number* number;
+ //        return square;
+        displaySquare.textContent = `the square of ${number}. is ${square}`; 
+         console.log(square);
+
+	}
+
+	const calculateHalf = () =>{
+		 const num1 = document.getElementById("num1").value;
+		const displayHalf = document.getElementById("displayHalf");
+        const half = num1/2;
+  //       return half;
+        displayHalf.textContent = `half of ${num1}. is ${half}`; 
+         console.log(half);
+
+	};
+
+	const calculatePercent = () =>{
+		 const principal = document.getElementById("principal").value;
+		 const num2 = document.getElementById("num2").value;
+		// const displayPercent = document.getElementById("displayPercent");
+        const percent = num2*100/principal;
+        // return half;
+        displayPercent.textContent = `${num2}. is ${percent} % of ${principal}`; 
+         // console.log(half);
+
+	};
+
+	const calculateArea = () =>{
+		 const raduis = document.getElementById("raduis").value;
+		// const displayHalf = document.getElementById("displayHalf");
+        const area = 22/7* raduis **2;
+        // return half;
+        displayArea.textContent = `the area of a circle with raduis of  ${raduis}. is ${area.toFixed(2)}`; 
+         // console.log(half);
+
+	};
+
+
+	const calculateAll = () =>{
+		const spiral = document.getElementById("spiral").value;
+	  const half1 = spiral/2;
+        const  square1 = half1 * half1;
+         const area1 = 22/7* square1 **2;
+         const area2 = area1.toFixed(2);
+        
+                 square2 = square1 * square1;
+         const percent2 = num2*100/square2;
+         console.log(` ${square2} `);
+       
+          displaySpiral.textContent = `the answer with input of ${spiral}. is ${square2.toFixed(2)}`; 
+     
+   
+     }
+</script>
+</body>
+</html>
